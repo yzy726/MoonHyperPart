@@ -1,0 +1,30 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "Ag108/MoonHyperPart/src/metrics"
+
+import {
+  "Ag108/MoonHyperPart/src/model",
+  "moonbitlang/core/debug",
+}
+
+// Values
+pub fn uniform_capacity(Int64, Int32) -> Result[Int64, @model.InputError]
+
+pub fn verify(@model.Hypergraph, Array[Int32], Array[Int64]) -> Result[Metrics, @model.InputError]
+
+// Errors
+
+// Types and methods
+#derive(@debug.Debug)
+pub struct Metrics {
+  part_weights : (Int64, Int64)
+  part_sizes : (Int32, Int32)
+  capacities : (Int64, Int64)
+  cut_net : Int64
+  connectivity : Int64
+  max_to_average : Double
+}
+pub fn Metrics::to_repr(Self) -> @debug.Repr
+
+// Type aliases
+
+// Traits
