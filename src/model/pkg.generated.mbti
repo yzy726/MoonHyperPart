@@ -1,0 +1,57 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "Ag108/MoonHyperPart/src/model"
+
+import {
+  "moonbitlang/core/debug",
+  "moonbitlang/core/json",
+}
+
+// Values
+pub fn build(Array[Int64], Array[Array[Int32]], Array[Int64], limits? : Limits) -> Result[Hypergraph, InputError]
+
+pub let max_weight : Int64
+
+// Errors
+
+// Types and methods
+#derive(@debug.Debug)
+type Hypergraph
+pub fn Hypergraph::degree(Self, Int32) -> Int32
+pub fn Hypergraph::edge_count(Self) -> Int32
+pub fn Hypergraph::edge_size(Self, Int32) -> Int32
+pub fn Hypergraph::edge_weight(Self, Int32) -> Int64
+pub fn Hypergraph::incident_at(Self, Int32, Int32) -> Int32
+pub fn Hypergraph::pin_at(Self, Int32, Int32) -> Int32
+pub fn Hypergraph::pin_count(Self) -> Int32
+pub fn Hypergraph::to_repr(Self) -> @debug.Repr
+pub fn Hypergraph::total_edge_weight(Self) -> Int64
+pub fn Hypergraph::total_vertex_weight(Self) -> Int64
+pub fn Hypergraph::vertex_count(Self) -> Int32
+pub fn Hypergraph::vertex_weight(Self, Int32) -> Int64
+
+#derive(Eq, @debug.Debug, @json.ToJson)
+pub(all) struct InputError {
+  code : String
+  line : Int32
+  message : String
+}
+pub fn InputError::equal(Self, Self) -> Bool
+pub fn InputError::not_equal(Self, Self) -> Bool
+pub fn InputError::to_json(Self) -> @json.Json
+pub fn InputError::to_repr(Self) -> @debug.Repr
+
+#derive(Eq, @debug.Debug)
+pub(all) struct Limits {
+  max_vertices : Int32
+  max_edges : Int32
+  max_pins : Int32
+  max_text_bytes : Int32
+}
+pub fn Limits::default() -> Self
+pub fn Limits::equal(Self, Self) -> Bool
+pub fn Limits::not_equal(Self, Self) -> Bool
+pub fn Limits::to_repr(Self) -> @debug.Repr
+
+// Type aliases
+
+// Traits
