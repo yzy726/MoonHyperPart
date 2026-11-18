@@ -13,25 +13,31 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--exe", type=Path)
+    parser.add_argument("--registry", action="store_true", help="resolve the published 0.1.0 from Mooncakes")
     args = parser.parse_args()
-    subprocess.run(["moon", "package"], cwd=ROOT, check=True, timeout=120)
+    if not args.registry:
+        subprocess.run(["moon", "package"], cwd=ROOT, check=True, timeout=120)
     archive = ROOT / "_build/publish/Ag108-MoonHyperPart-0.1.0.zip"
     workspace_parent = ROOT / ".agent-workplace"
     workspace_parent.mkdir(exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="consumer-", dir=workspace_parent) as name:
         workspace = Path(name).resolve()
         assert workspace.is_relative_to(workspace_parent.resolve())
-        package = workspace / "package"
-        package.mkdir()
-        with zipfile.ZipFile(archive) as zipped:
-            for member in zipped.infolist():
-                path = (package / member.filename.replace("\\", "/")).resolve()
-                assert path.is_relative_to(package.resolve()), member.filename
-            zipped.extractall(package)
+        if not args.registry:
+            package = workspace / "package"
+            package.mkdir()
+            with zipfile.ZipFile(archive) as zipped:
+                for member in zipped.infolist():
+                    path = (package / member.filename.replace("\\", "/")).resolve()
+                    assert path.is_relative_to(package.resolve()), member.filename
+                zipped.extractall(package)
         consumer = workspace / "consumer"
         shutil.copytree(ROOT / "examples/cli_consumer", consumer,
                         ignore=shutil.ignore_patterns("_build", ".mooncakes"))
-        (workspace / "moon.work").write_text('members = ["package", "consumer"]\n', encoding="utf-8")
+        if args.registry:
+            subprocess.run(["moon", "update"], cwd=consumer, check=True, timeout=120)
+        else:
+            (workspace / "moon.work").write_text('members = ["package", "consumer"]\n', encoding="utf-8")
         results = []
         assignments = []
         for target in ("native", "js", "wasm-gc"):
@@ -54,7 +60,8 @@ def main():
             assert process.returncode == 0, (process.stdout, process.stderr)
             assert json.loads(process.stdout) == results[0]
             assert [int(line) for line in part.read_text().splitlines()] == assignments[0]
-    print("Clean packaged consumer passed on native, JS and wasm-gc; CLI and library agree")
+    source = "registry" if args.registry else "packaged"
+    print(f"Clean {source} consumer passed on native, JS and wasm-gc; CLI and library agree")
 
 
 if __name__ == "__main__":
