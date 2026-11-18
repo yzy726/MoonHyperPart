@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "measured_at_utc": "2026-11-18T12:36:03.153667+00:00",
-  "algorithm_commit": "74652f81a7e09f23fbcddf50fceb5ad0ef754785",
+  "measured_at_utc": "2026-11-18T12:43:46.468612+00:00",
+  "algorithm_commit": "28638510af2da317c7fdabb5c20c26c47e9672ea",
   "platform": "Windows-11-10.0.22631-SP0",
   "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
   "logical_cpus": 28,
   "toolchain": "moon 0.1.20261104 (940aa18 2026-11-04) ~\\.moon\\bin\\moon.exe\nmoonc v0.10.20+65efd5b93 (2026-11-05) ~\\.moon\\bin\\moonc.exe\nmoonrun 0.1.20261104 (940aa18 2026-11-04) ~\\.moon\\bin\\moonrun.exe\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg",
   "memory_method": "sampled GetProcessMemoryInfo.PeakWorkingSetSize",
-  "manifest_sha256": "622a2d8874f41f479538c5db4e1d9ce810fbd6f0d44399f6655c10b6285ad259",
+  "manifest_sha256": "3a1ba6bf5b7b5db2c11e104ea7579bb22f9c0754a28dac7f61f5fb442a6a1679",
   "runs": [
     {
       "instance": "testdata/tiny_optimum.hgr",
@@ -57,7 +57,7 @@
           }
         },
         "measurement": {
-          "seconds": 0.036131899999872985,
+          "seconds": 0.034078799999861076,
           "observed_peak_working_set_bytes": 7888896
         }
       },
@@ -105,8 +105,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.028955199999927572,
-          "observed_peak_working_set_bytes": 7925760
+          "seconds": 0.024398000000019238,
+          "observed_peak_working_set_bytes": 7888896
         }
       },
       "strict_improvement": true
@@ -159,8 +159,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.02831190000006245,
-          "observed_peak_working_set_bytes": 7888896
+          "seconds": 0.02697840000018914,
+          "observed_peak_working_set_bytes": 7929856
         }
       },
       "refined": {
@@ -207,8 +207,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.029057899999770598,
-          "observed_peak_working_set_bytes": 7917568
+          "seconds": 0.03085220000002664,
+          "observed_peak_working_set_bytes": 7888896
         }
       },
       "strict_improvement": true
@@ -261,8 +261,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.02332299999989118,
-          "observed_peak_working_set_bytes": 7749632
+          "seconds": 0.0266591999998127,
+          "observed_peak_working_set_bytes": 7696384
         }
       },
       "refined": {
@@ -309,472 +309,370 @@
           }
         },
         "measurement": {
-          "seconds": 0.02693249999992986,
-          "observed_peak_working_set_bytes": 7888896
-        }
-      },
-      "strict_improvement": false
-    },
-    {
-      "instance": "testdata/weighted_balance.hgr",
-      "seed": 1,
-      "sha256": "61c8eaa3d3d825991e68495ff3f976763ceb41402d60851d58a0df875951dd06",
-      "baseline": {
-        "report": {
-          "schema_version": 1,
-          "status": "ok",
-          "vertices": 4,
-          "edges": 2,
-          "pins": 4,
-          "k": 2,
-          "objective": "cut-net",
-          "cut_net": "0",
-          "connectivity": "0",
-          "part_weights": [
-            "3",
-            "3"
-          ],
-          "part_sizes": [
-            2,
-            2
-          ],
-          "capacities": [
-            "3",
-            "3"
-          ],
-          "max_to_average": 1,
-          "run": {
-            "seed": 1,
-            "starts": 1,
-            "initial_cut": "0",
-            "search_nodes_used": 0,
-            "moves": 0,
-            "swaps": 0,
-            "passes": 0,
-            "rolled_back": 0,
-            "budget_limited": false,
-            "budget": {
-              "passes": 0,
-              "moves": 10000,
-              "swap_trials": 10000,
-              "candidates": 200000,
-              "search_nodes": 100000
-            }
-          }
-        },
-        "measurement": {
-          "seconds": 0.024632800000290445,
-          "observed_peak_working_set_bytes": 7888896
-        }
-      },
-      "refined": {
-        "report": {
-          "schema_version": 1,
-          "status": "ok",
-          "vertices": 4,
-          "edges": 2,
-          "pins": 4,
-          "k": 2,
-          "objective": "cut-net",
-          "cut_net": "0",
-          "connectivity": "0",
-          "part_weights": [
-            "3",
-            "3"
-          ],
-          "part_sizes": [
-            2,
-            2
-          ],
-          "capacities": [
-            "3",
-            "3"
-          ],
-          "max_to_average": 1,
-          "run": {
-            "seed": 1,
-            "starts": 1,
-            "initial_cut": "0",
-            "search_nodes_used": 0,
-            "moves": 4,
-            "swaps": 2,
-            "passes": 1,
-            "rolled_back": 4,
-            "budget_limited": false,
-            "budget": {
-              "passes": 8,
-              "moves": 10000,
-              "swap_trials": 10000,
-              "candidates": 200000,
-              "search_nodes": 100000
-            }
-          }
-        },
-        "measurement": {
-          "seconds": 0.02625099999977465,
-          "observed_peak_working_set_bytes": 7888896
-        }
-      },
-      "strict_improvement": false
-    },
-    {
-      "instance": "testdata/repair_budget.hgr",
-      "seed": 726,
-      "sha256": "355f8d23bf0d223429a8065d66314650f875c0ad158176ecf2ebca7c73473196",
-      "baseline": {
-        "report": {
-          "schema_version": 1,
-          "status": "ok",
-          "vertices": 5,
-          "edges": 0,
-          "pins": 0,
-          "k": 2,
-          "objective": "cut-net",
-          "cut_net": "0",
-          "connectivity": "0",
-          "part_weights": [
-            "15",
-            "15"
-          ],
-          "part_sizes": [
-            2,
-            3
-          ],
-          "capacities": [
-            "15",
-            "15"
-          ],
-          "max_to_average": 1,
-          "run": {
-            "seed": 726,
-            "starts": 1,
-            "initial_cut": "0",
-            "search_nodes_used": 8,
-            "moves": 0,
-            "swaps": 0,
-            "passes": 0,
-            "rolled_back": 0,
-            "budget_limited": false,
-            "budget": {
-              "passes": 0,
-              "moves": 10000,
-              "swap_trials": 10000,
-              "candidates": 200000,
-              "search_nodes": 100000
-            }
-          }
-        },
-        "measurement": {
-          "seconds": 0.02996179999991,
-          "observed_peak_working_set_bytes": 7892992
-        }
-      },
-      "refined": {
-        "report": {
-          "schema_version": 1,
-          "status": "ok",
-          "vertices": 5,
-          "edges": 0,
-          "pins": 0,
-          "k": 2,
-          "objective": "cut-net",
-          "cut_net": "0",
-          "connectivity": "0",
-          "part_weights": [
-            "15",
-            "15"
-          ],
-          "part_sizes": [
-            2,
-            3
-          ],
-          "capacities": [
-            "15",
-            "15"
-          ],
-          "max_to_average": 1,
-          "run": {
-            "seed": 726,
-            "starts": 1,
-            "initial_cut": "0",
-            "search_nodes_used": 8,
-            "moves": 0,
-            "swaps": 0,
-            "passes": 1,
-            "rolled_back": 0,
-            "budget_limited": false,
-            "budget": {
-              "passes": 8,
-              "moves": 10000,
-              "swap_trials": 10000,
-              "candidates": 200000,
-              "search_nodes": 100000
-            }
-          }
-        },
-        "measurement": {
-          "seconds": 0.022124300000086805,
-          "observed_peak_working_set_bytes": 7766016
-        }
-      },
-      "strict_improvement": false
-    },
-    {
-      "instance": "testdata/repair_budget.hgr",
-      "seed": 1,
-      "sha256": "355f8d23bf0d223429a8065d66314650f875c0ad158176ecf2ebca7c73473196",
-      "baseline": {
-        "report": {
-          "schema_version": 1,
-          "status": "ok",
-          "vertices": 5,
-          "edges": 0,
-          "pins": 0,
-          "k": 2,
-          "objective": "cut-net",
-          "cut_net": "0",
-          "connectivity": "0",
-          "part_weights": [
-            "15",
-            "15"
-          ],
-          "part_sizes": [
-            2,
-            3
-          ],
-          "capacities": [
-            "15",
-            "15"
-          ],
-          "max_to_average": 1,
-          "run": {
-            "seed": 1,
-            "starts": 1,
-            "initial_cut": "0",
-            "search_nodes_used": 8,
-            "moves": 0,
-            "swaps": 0,
-            "passes": 0,
-            "rolled_back": 0,
-            "budget_limited": false,
-            "budget": {
-              "passes": 0,
-              "moves": 10000,
-              "swap_trials": 10000,
-              "candidates": 200000,
-              "search_nodes": 100000
-            }
-          }
-        },
-        "measurement": {
-          "seconds": 0.024358399999982794,
-          "observed_peak_working_set_bytes": 7901184
-        }
-      },
-      "refined": {
-        "report": {
-          "schema_version": 1,
-          "status": "ok",
-          "vertices": 5,
-          "edges": 0,
-          "pins": 0,
-          "k": 2,
-          "objective": "cut-net",
-          "cut_net": "0",
-          "connectivity": "0",
-          "part_weights": [
-            "15",
-            "15"
-          ],
-          "part_sizes": [
-            2,
-            3
-          ],
-          "capacities": [
-            "15",
-            "15"
-          ],
-          "max_to_average": 1,
-          "run": {
-            "seed": 1,
-            "starts": 1,
-            "initial_cut": "0",
-            "search_nodes_used": 8,
-            "moves": 0,
-            "swaps": 0,
-            "passes": 1,
-            "rolled_back": 0,
-            "budget_limited": false,
-            "budget": {
-              "passes": 8,
-              "moves": 10000,
-              "swap_trials": 10000,
-              "candidates": 200000,
-              "search_nodes": 100000
-            }
-          }
-        },
-        "measurement": {
-          "seconds": 0.023888700000043173,
-          "observed_peak_working_set_bytes": 7921664
-        }
-      },
-      "strict_improvement": false
-    },
-    {
-      "instance": "testdata/clustered12.hgr",
-      "seed": 726,
-      "sha256": "6f508b4821611d5e3ddfa7cf8f8b8a78246ba38e244c9bdb3ae7bb43a7d80d10",
-      "baseline": {
-        "report": {
-          "schema_version": 1,
-          "status": "ok",
-          "vertices": 12,
-          "edges": 7,
-          "pins": 18,
-          "k": 2,
-          "objective": "cut-net",
-          "cut_net": "43",
-          "connectivity": "43",
-          "part_weights": [
-            "6",
-            "6"
-          ],
-          "part_sizes": [
-            6,
-            6
-          ],
-          "capacities": [
-            "6",
-            "6"
-          ],
-          "max_to_average": 1,
-          "run": {
-            "seed": 726,
-            "starts": 1,
-            "initial_cut": "43",
-            "search_nodes_used": 0,
-            "moves": 0,
-            "swaps": 0,
-            "passes": 0,
-            "rolled_back": 0,
-            "budget_limited": false,
-            "budget": {
-              "passes": 0,
-              "moves": 10000,
-              "swap_trials": 10000,
-              "candidates": 200000,
-              "search_nodes": 100000
-            }
-          }
-        },
-        "measurement": {
-          "seconds": 0.02524700000003577,
-          "observed_peak_working_set_bytes": 7892992
-        }
-      },
-      "refined": {
-        "report": {
-          "schema_version": 1,
-          "status": "ok",
-          "vertices": 12,
-          "edges": 7,
-          "pins": 18,
-          "k": 2,
-          "objective": "cut-net",
-          "cut_net": "1",
-          "connectivity": "1",
-          "part_weights": [
-            "6",
-            "6"
-          ],
-          "part_sizes": [
-            6,
-            6
-          ],
-          "capacities": [
-            "6",
-            "6"
-          ],
-          "max_to_average": 1,
-          "run": {
-            "seed": 726,
-            "starts": 1,
-            "initial_cut": "43",
-            "search_nodes_used": 0,
-            "moves": 48,
-            "swaps": 24,
-            "passes": 4,
-            "rolled_back": 32,
-            "budget_limited": false,
-            "budget": {
-              "passes": 8,
-              "moves": 10000,
-              "swap_trials": 10000,
-              "candidates": 200000,
-              "search_nodes": 100000
-            }
-          }
-        },
-        "measurement": {
-          "seconds": 0.025954600000204664,
-          "observed_peak_working_set_bytes": 7925760
-        }
-      },
-      "strict_improvement": true
-    },
-    {
-      "instance": "testdata/clustered12.hgr",
-      "seed": 1,
-      "sha256": "6f508b4821611d5e3ddfa7cf8f8b8a78246ba38e244c9bdb3ae7bb43a7d80d10",
-      "baseline": {
-        "report": {
-          "schema_version": 1,
-          "status": "ok",
-          "vertices": 12,
-          "edges": 7,
-          "pins": 18,
-          "k": 2,
-          "objective": "cut-net",
-          "cut_net": "43",
-          "connectivity": "43",
-          "part_weights": [
-            "6",
-            "6"
-          ],
-          "part_sizes": [
-            6,
-            6
-          ],
-          "capacities": [
-            "6",
-            "6"
-          ],
-          "max_to_average": 1,
-          "run": {
-            "seed": 1,
-            "starts": 1,
-            "initial_cut": "43",
-            "search_nodes_used": 0,
-            "moves": 0,
-            "swaps": 0,
-            "passes": 0,
-            "rolled_back": 0,
-            "budget_limited": false,
-            "budget": {
-              "passes": 0,
-              "moves": 10000,
-              "swap_trials": 10000,
-              "candidates": 200000,
-              "search_nodes": 100000
-            }
-          }
-        },
-        "measurement": {
-          "seconds": 0.02603339999996024,
+          "seconds": 0.026638700000148674,
           "observed_peak_working_set_bytes": 7884800
         }
       },
+      "strict_improvement": false
+    },
+    {
+      "instance": "testdata/weighted_balance.hgr",
+      "seed": 1,
+      "sha256": "61c8eaa3d3d825991e68495ff3f976763ceb41402d60851d58a0df875951dd06",
+      "baseline": {
+        "report": {
+          "schema_version": 1,
+          "status": "ok",
+          "vertices": 4,
+          "edges": 2,
+          "pins": 4,
+          "k": 2,
+          "objective": "cut-net",
+          "cut_net": "0",
+          "connectivity": "0",
+          "part_weights": [
+            "3",
+            "3"
+          ],
+          "part_sizes": [
+            2,
+            2
+          ],
+          "capacities": [
+            "3",
+            "3"
+          ],
+          "max_to_average": 1,
+          "run": {
+            "seed": 1,
+            "starts": 1,
+            "initial_cut": "0",
+            "search_nodes_used": 0,
+            "moves": 0,
+            "swaps": 0,
+            "passes": 0,
+            "rolled_back": 0,
+            "budget_limited": false,
+            "budget": {
+              "passes": 0,
+              "moves": 10000,
+              "swap_trials": 10000,
+              "candidates": 200000,
+              "search_nodes": 100000
+            }
+          }
+        },
+        "measurement": {
+          "seconds": 0.02923640000017258,
+          "observed_peak_working_set_bytes": 7921664
+        }
+      },
+      "refined": {
+        "report": {
+          "schema_version": 1,
+          "status": "ok",
+          "vertices": 4,
+          "edges": 2,
+          "pins": 4,
+          "k": 2,
+          "objective": "cut-net",
+          "cut_net": "0",
+          "connectivity": "0",
+          "part_weights": [
+            "3",
+            "3"
+          ],
+          "part_sizes": [
+            2,
+            2
+          ],
+          "capacities": [
+            "3",
+            "3"
+          ],
+          "max_to_average": 1,
+          "run": {
+            "seed": 1,
+            "starts": 1,
+            "initial_cut": "0",
+            "search_nodes_used": 0,
+            "moves": 4,
+            "swaps": 2,
+            "passes": 1,
+            "rolled_back": 4,
+            "budget_limited": false,
+            "budget": {
+              "passes": 8,
+              "moves": 10000,
+              "swap_trials": 10000,
+              "candidates": 200000,
+              "search_nodes": 100000
+            }
+          }
+        },
+        "measurement": {
+          "seconds": 0.025294399999893358,
+          "observed_peak_working_set_bytes": 7888896
+        }
+      },
+      "strict_improvement": false
+    },
+    {
+      "instance": "testdata/repair_budget.hgr",
+      "seed": 726,
+      "sha256": "355f8d23bf0d223429a8065d66314650f875c0ad158176ecf2ebca7c73473196",
+      "baseline": {
+        "report": {
+          "schema_version": 1,
+          "status": "ok",
+          "vertices": 5,
+          "edges": 0,
+          "pins": 0,
+          "k": 2,
+          "objective": "cut-net",
+          "cut_net": "0",
+          "connectivity": "0",
+          "part_weights": [
+            "15",
+            "15"
+          ],
+          "part_sizes": [
+            2,
+            3
+          ],
+          "capacities": [
+            "15",
+            "15"
+          ],
+          "max_to_average": 1,
+          "run": {
+            "seed": 726,
+            "starts": 1,
+            "initial_cut": "0",
+            "search_nodes_used": 8,
+            "moves": 0,
+            "swaps": 0,
+            "passes": 0,
+            "rolled_back": 0,
+            "budget_limited": false,
+            "budget": {
+              "passes": 0,
+              "moves": 10000,
+              "swap_trials": 10000,
+              "candidates": 200000,
+              "search_nodes": 100000
+            }
+          }
+        },
+        "measurement": {
+          "seconds": 0.026926900000034948,
+          "observed_peak_working_set_bytes": 7925760
+        }
+      },
+      "refined": {
+        "report": {
+          "schema_version": 1,
+          "status": "ok",
+          "vertices": 5,
+          "edges": 0,
+          "pins": 0,
+          "k": 2,
+          "objective": "cut-net",
+          "cut_net": "0",
+          "connectivity": "0",
+          "part_weights": [
+            "15",
+            "15"
+          ],
+          "part_sizes": [
+            2,
+            3
+          ],
+          "capacities": [
+            "15",
+            "15"
+          ],
+          "max_to_average": 1,
+          "run": {
+            "seed": 726,
+            "starts": 1,
+            "initial_cut": "0",
+            "search_nodes_used": 8,
+            "moves": 0,
+            "swaps": 0,
+            "passes": 1,
+            "rolled_back": 0,
+            "budget_limited": false,
+            "budget": {
+              "passes": 8,
+              "moves": 10000,
+              "swap_trials": 10000,
+              "candidates": 200000,
+              "search_nodes": 100000
+            }
+          }
+        },
+        "measurement": {
+          "seconds": 0.024339200000213168,
+          "observed_peak_working_set_bytes": 7888896
+        }
+      },
+      "strict_improvement": false
+    },
+    {
+      "instance": "testdata/repair_budget.hgr",
+      "seed": 1,
+      "sha256": "355f8d23bf0d223429a8065d66314650f875c0ad158176ecf2ebca7c73473196",
+      "baseline": {
+        "report": {
+          "schema_version": 1,
+          "status": "ok",
+          "vertices": 5,
+          "edges": 0,
+          "pins": 0,
+          "k": 2,
+          "objective": "cut-net",
+          "cut_net": "0",
+          "connectivity": "0",
+          "part_weights": [
+            "15",
+            "15"
+          ],
+          "part_sizes": [
+            2,
+            3
+          ],
+          "capacities": [
+            "15",
+            "15"
+          ],
+          "max_to_average": 1,
+          "run": {
+            "seed": 1,
+            "starts": 1,
+            "initial_cut": "0",
+            "search_nodes_used": 8,
+            "moves": 0,
+            "swaps": 0,
+            "passes": 0,
+            "rolled_back": 0,
+            "budget_limited": false,
+            "budget": {
+              "passes": 0,
+              "moves": 10000,
+              "swap_trials": 10000,
+              "candidates": 200000,
+              "search_nodes": 100000
+            }
+          }
+        },
+        "measurement": {
+          "seconds": 0.02555239999992409,
+          "observed_peak_working_set_bytes": 7852032
+        }
+      },
+      "refined": {
+        "report": {
+          "schema_version": 1,
+          "status": "ok",
+          "vertices": 5,
+          "edges": 0,
+          "pins": 0,
+          "k": 2,
+          "objective": "cut-net",
+          "cut_net": "0",
+          "connectivity": "0",
+          "part_weights": [
+            "15",
+            "15"
+          ],
+          "part_sizes": [
+            2,
+            3
+          ],
+          "capacities": [
+            "15",
+            "15"
+          ],
+          "max_to_average": 1,
+          "run": {
+            "seed": 1,
+            "starts": 1,
+            "initial_cut": "0",
+            "search_nodes_used": 8,
+            "moves": 0,
+            "swaps": 0,
+            "passes": 1,
+            "rolled_back": 0,
+            "budget_limited": false,
+            "budget": {
+              "passes": 8,
+              "moves": 10000,
+              "swap_trials": 10000,
+              "candidates": 200000,
+              "search_nodes": 100000
+            }
+          }
+        },
+        "measurement": {
+          "seconds": 0.02955310000015743,
+          "observed_peak_working_set_bytes": 7897088
+        }
+      },
+      "strict_improvement": false
+    },
+    {
+      "instance": "testdata/clustered12.hgr",
+      "seed": 726,
+      "sha256": "6f508b4821611d5e3ddfa7cf8f8b8a78246ba38e244c9bdb3ae7bb43a7d80d10",
+      "baseline": {
+        "report": {
+          "schema_version": 1,
+          "status": "ok",
+          "vertices": 12,
+          "edges": 7,
+          "pins": 18,
+          "k": 2,
+          "objective": "cut-net",
+          "cut_net": "43",
+          "connectivity": "43",
+          "part_weights": [
+            "6",
+            "6"
+          ],
+          "part_sizes": [
+            6,
+            6
+          ],
+          "capacities": [
+            "6",
+            "6"
+          ],
+          "max_to_average": 1,
+          "run": {
+            "seed": 726,
+            "starts": 1,
+            "initial_cut": "43",
+            "search_nodes_used": 0,
+            "moves": 0,
+            "swaps": 0,
+            "passes": 0,
+            "rolled_back": 0,
+            "budget_limited": false,
+            "budget": {
+              "passes": 0,
+              "moves": 10000,
+              "swap_trials": 10000,
+              "candidates": 200000,
+              "search_nodes": 100000
+            }
+          }
+        },
+        "measurement": {
+          "seconds": 0.02489300000024741,
+          "observed_peak_working_set_bytes": 7892992
+        }
+      },
       "refined": {
         "report": {
           "schema_version": 1,
@@ -800,7 +698,7 @@
           ],
           "max_to_average": 1,
           "run": {
-            "seed": 1,
+            "seed": 726,
             "starts": 1,
             "initial_cut": "43",
             "search_nodes_used": 0,
@@ -819,146 +717,44 @@
           }
         },
         "measurement": {
-          "seconds": 0.033550300000115385,
-          "observed_peak_working_set_bytes": 7929856
+          "seconds": 0.029410699999971257,
+          "observed_peak_working_set_bytes": 7892992
         }
       },
       "strict_improvement": true
     },
     {
-      "instance": "testdata/disconnected8.hgr",
-      "seed": 726,
-      "sha256": "de343ba3552df2f2bd82a2a3fa32df4f04bb6e529054a6f6dbc302d8c1826920",
-      "baseline": {
-        "report": {
-          "schema_version": 1,
-          "status": "ok",
-          "vertices": 8,
-          "edges": 2,
-          "pins": 8,
-          "k": 2,
-          "objective": "cut-net",
-          "cut_net": "2",
-          "connectivity": "2",
-          "part_weights": [
-            "4",
-            "4"
-          ],
-          "part_sizes": [
-            4,
-            4
-          ],
-          "capacities": [
-            "4",
-            "4"
-          ],
-          "max_to_average": 1,
-          "run": {
-            "seed": 726,
-            "starts": 1,
-            "initial_cut": "2",
-            "search_nodes_used": 0,
-            "moves": 0,
-            "swaps": 0,
-            "passes": 0,
-            "rolled_back": 0,
-            "budget_limited": false,
-            "budget": {
-              "passes": 0,
-              "moves": 10000,
-              "swap_trials": 10000,
-              "candidates": 200000,
-              "search_nodes": 100000
-            }
-          }
-        },
-        "measurement": {
-          "seconds": 0.02547290000029534,
-          "observed_peak_working_set_bytes": 7925760
-        }
-      },
-      "refined": {
-        "report": {
-          "schema_version": 1,
-          "status": "ok",
-          "vertices": 8,
-          "edges": 2,
-          "pins": 8,
-          "k": 2,
-          "objective": "cut-net",
-          "cut_net": "2",
-          "connectivity": "2",
-          "part_weights": [
-            "4",
-            "4"
-          ],
-          "part_sizes": [
-            4,
-            4
-          ],
-          "capacities": [
-            "4",
-            "4"
-          ],
-          "max_to_average": 1,
-          "run": {
-            "seed": 726,
-            "starts": 1,
-            "initial_cut": "2",
-            "search_nodes_used": 0,
-            "moves": 8,
-            "swaps": 4,
-            "passes": 1,
-            "rolled_back": 8,
-            "budget_limited": false,
-            "budget": {
-              "passes": 8,
-              "moves": 10000,
-              "swap_trials": 10000,
-              "candidates": 200000,
-              "search_nodes": 100000
-            }
-          }
-        },
-        "measurement": {
-          "seconds": 0.026501000000280328,
-          "observed_peak_working_set_bytes": 7888896
-        }
-      },
-      "strict_improvement": false
-    },
-    {
-      "instance": "testdata/disconnected8.hgr",
+      "instance": "testdata/clustered12.hgr",
       "seed": 1,
-      "sha256": "de343ba3552df2f2bd82a2a3fa32df4f04bb6e529054a6f6dbc302d8c1826920",
+      "sha256": "6f508b4821611d5e3ddfa7cf8f8b8a78246ba38e244c9bdb3ae7bb43a7d80d10",
       "baseline": {
         "report": {
           "schema_version": 1,
           "status": "ok",
-          "vertices": 8,
-          "edges": 2,
-          "pins": 8,
+          "vertices": 12,
+          "edges": 7,
+          "pins": 18,
           "k": 2,
           "objective": "cut-net",
-          "cut_net": "2",
-          "connectivity": "2",
+          "cut_net": "43",
+          "connectivity": "43",
           "part_weights": [
-            "4",
-            "4"
+            "6",
+            "6"
           ],
           "part_sizes": [
-            4,
-            4
+            6,
+            6
           ],
           "capacities": [
-            "4",
-            "4"
+            "6",
+            "6"
           ],
           "max_to_average": 1,
           "run": {
             "seed": 1,
             "starts": 1,
-            "initial_cut": "2",
+            "initial_cut": "43",
             "search_nodes_used": 0,
             "moves": 0,
             "swaps": 0,
@@ -975,109 +771,7 @@
           }
         },
         "measurement": {
-          "seconds": 0.028279399999973975,
-          "observed_peak_working_set_bytes": 7888896
-        }
-      },
-      "refined": {
-        "report": {
-          "schema_version": 1,
-          "status": "ok",
-          "vertices": 8,
-          "edges": 2,
-          "pins": 8,
-          "k": 2,
-          "objective": "cut-net",
-          "cut_net": "2",
-          "connectivity": "2",
-          "part_weights": [
-            "4",
-            "4"
-          ],
-          "part_sizes": [
-            4,
-            4
-          ],
-          "capacities": [
-            "4",
-            "4"
-          ],
-          "max_to_average": 1,
-          "run": {
-            "seed": 1,
-            "starts": 1,
-            "initial_cut": "2",
-            "search_nodes_used": 0,
-            "moves": 8,
-            "swaps": 4,
-            "passes": 1,
-            "rolled_back": 8,
-            "budget_limited": false,
-            "budget": {
-              "passes": 8,
-              "moves": 10000,
-              "swap_trials": 10000,
-              "candidates": 200000,
-              "search_nodes": 100000
-            }
-          }
-        },
-        "measurement": {
-          "seconds": 0.028107600000112143,
-          "observed_peak_working_set_bytes": 7901184
-        }
-      },
-      "strict_improvement": false
-    },
-    {
-      "instance": "testdata/isolated6.hgr",
-      "seed": 726,
-      "sha256": "89eb5d9995ae5ba8b93a3e2bf5de127c904220d984bc5f22a9aade73e64d631e",
-      "baseline": {
-        "report": {
-          "schema_version": 1,
-          "status": "ok",
-          "vertices": 6,
-          "edges": 1,
-          "pins": 1,
-          "k": 2,
-          "objective": "cut-net",
-          "cut_net": "0",
-          "connectivity": "0",
-          "part_weights": [
-            "3",
-            "3"
-          ],
-          "part_sizes": [
-            3,
-            3
-          ],
-          "capacities": [
-            "3",
-            "3"
-          ],
-          "max_to_average": 1,
-          "run": {
-            "seed": 726,
-            "starts": 1,
-            "initial_cut": "0",
-            "search_nodes_used": 0,
-            "moves": 0,
-            "swaps": 0,
-            "passes": 0,
-            "rolled_back": 0,
-            "budget_limited": false,
-            "budget": {
-              "passes": 0,
-              "moves": 10000,
-              "swap_trials": 10000,
-              "candidates": 200000,
-              "search_nodes": 100000
-            }
-          }
-        },
-        "measurement": {
-          "seconds": 0.027613900000233116,
+          "seconds": 0.028421200000138924,
           "observed_peak_working_set_bytes": 7909376
         }
       },
@@ -1085,6 +779,312 @@
         "report": {
           "schema_version": 1,
           "status": "ok",
+          "vertices": 12,
+          "edges": 7,
+          "pins": 18,
+          "k": 2,
+          "objective": "cut-net",
+          "cut_net": "1",
+          "connectivity": "1",
+          "part_weights": [
+            "6",
+            "6"
+          ],
+          "part_sizes": [
+            6,
+            6
+          ],
+          "capacities": [
+            "6",
+            "6"
+          ],
+          "max_to_average": 1,
+          "run": {
+            "seed": 1,
+            "starts": 1,
+            "initial_cut": "43",
+            "search_nodes_used": 0,
+            "moves": 48,
+            "swaps": 24,
+            "passes": 4,
+            "rolled_back": 32,
+            "budget_limited": false,
+            "budget": {
+              "passes": 8,
+              "moves": 10000,
+              "swap_trials": 10000,
+              "candidates": 200000,
+              "search_nodes": 100000
+            }
+          }
+        },
+        "measurement": {
+          "seconds": 0.026094000000284723,
+          "observed_peak_working_set_bytes": 7901184
+        }
+      },
+      "strict_improvement": true
+    },
+    {
+      "instance": "testdata/disconnected8.hgr",
+      "seed": 726,
+      "sha256": "de343ba3552df2f2bd82a2a3fa32df4f04bb6e529054a6f6dbc302d8c1826920",
+      "baseline": {
+        "report": {
+          "schema_version": 1,
+          "status": "ok",
+          "vertices": 8,
+          "edges": 2,
+          "pins": 8,
+          "k": 2,
+          "objective": "cut-net",
+          "cut_net": "2",
+          "connectivity": "2",
+          "part_weights": [
+            "4",
+            "4"
+          ],
+          "part_sizes": [
+            4,
+            4
+          ],
+          "capacities": [
+            "4",
+            "4"
+          ],
+          "max_to_average": 1,
+          "run": {
+            "seed": 726,
+            "starts": 1,
+            "initial_cut": "2",
+            "search_nodes_used": 0,
+            "moves": 0,
+            "swaps": 0,
+            "passes": 0,
+            "rolled_back": 0,
+            "budget_limited": false,
+            "budget": {
+              "passes": 0,
+              "moves": 10000,
+              "swap_trials": 10000,
+              "candidates": 200000,
+              "search_nodes": 100000
+            }
+          }
+        },
+        "measurement": {
+          "seconds": 0.025519400000121095,
+          "observed_peak_working_set_bytes": 7888896
+        }
+      },
+      "refined": {
+        "report": {
+          "schema_version": 1,
+          "status": "ok",
+          "vertices": 8,
+          "edges": 2,
+          "pins": 8,
+          "k": 2,
+          "objective": "cut-net",
+          "cut_net": "2",
+          "connectivity": "2",
+          "part_weights": [
+            "4",
+            "4"
+          ],
+          "part_sizes": [
+            4,
+            4
+          ],
+          "capacities": [
+            "4",
+            "4"
+          ],
+          "max_to_average": 1,
+          "run": {
+            "seed": 726,
+            "starts": 1,
+            "initial_cut": "2",
+            "search_nodes_used": 0,
+            "moves": 8,
+            "swaps": 4,
+            "passes": 1,
+            "rolled_back": 8,
+            "budget_limited": false,
+            "budget": {
+              "passes": 8,
+              "moves": 10000,
+              "swap_trials": 10000,
+              "candidates": 200000,
+              "search_nodes": 100000
+            }
+          }
+        },
+        "measurement": {
+          "seconds": 0.026114199999938137,
+          "observed_peak_working_set_bytes": 7884800
+        }
+      },
+      "strict_improvement": false
+    },
+    {
+      "instance": "testdata/disconnected8.hgr",
+      "seed": 1,
+      "sha256": "de343ba3552df2f2bd82a2a3fa32df4f04bb6e529054a6f6dbc302d8c1826920",
+      "baseline": {
+        "report": {
+          "schema_version": 1,
+          "status": "ok",
+          "vertices": 8,
+          "edges": 2,
+          "pins": 8,
+          "k": 2,
+          "objective": "cut-net",
+          "cut_net": "2",
+          "connectivity": "2",
+          "part_weights": [
+            "4",
+            "4"
+          ],
+          "part_sizes": [
+            4,
+            4
+          ],
+          "capacities": [
+            "4",
+            "4"
+          ],
+          "max_to_average": 1,
+          "run": {
+            "seed": 1,
+            "starts": 1,
+            "initial_cut": "2",
+            "search_nodes_used": 0,
+            "moves": 0,
+            "swaps": 0,
+            "passes": 0,
+            "rolled_back": 0,
+            "budget_limited": false,
+            "budget": {
+              "passes": 0,
+              "moves": 10000,
+              "swap_trials": 10000,
+              "candidates": 200000,
+              "search_nodes": 100000
+            }
+          }
+        },
+        "measurement": {
+          "seconds": 0.027722399999674963,
+          "observed_peak_working_set_bytes": 7901184
+        }
+      },
+      "refined": {
+        "report": {
+          "schema_version": 1,
+          "status": "ok",
+          "vertices": 8,
+          "edges": 2,
+          "pins": 8,
+          "k": 2,
+          "objective": "cut-net",
+          "cut_net": "2",
+          "connectivity": "2",
+          "part_weights": [
+            "4",
+            "4"
+          ],
+          "part_sizes": [
+            4,
+            4
+          ],
+          "capacities": [
+            "4",
+            "4"
+          ],
+          "max_to_average": 1,
+          "run": {
+            "seed": 1,
+            "starts": 1,
+            "initial_cut": "2",
+            "search_nodes_used": 0,
+            "moves": 8,
+            "swaps": 4,
+            "passes": 1,
+            "rolled_back": 8,
+            "budget_limited": false,
+            "budget": {
+              "passes": 8,
+              "moves": 10000,
+              "swap_trials": 10000,
+              "candidates": 200000,
+              "search_nodes": 100000
+            }
+          }
+        },
+        "measurement": {
+          "seconds": 0.026291700000001583,
+          "observed_peak_working_set_bytes": 7921664
+        }
+      },
+      "strict_improvement": false
+    },
+    {
+      "instance": "testdata/isolated6.hgr",
+      "seed": 726,
+      "sha256": "89eb5d9995ae5ba8b93a3e2bf5de127c904220d984bc5f22a9aade73e64d631e",
+      "baseline": {
+        "report": {
+          "schema_version": 1,
+          "status": "ok",
+          "vertices": 6,
+          "edges": 1,
+          "pins": 1,
+          "k": 2,
+          "objective": "cut-net",
+          "cut_net": "0",
+          "connectivity": "0",
+          "part_weights": [
+            "3",
+            "3"
+          ],
+          "part_sizes": [
+            3,
+            3
+          ],
+          "capacities": [
+            "3",
+            "3"
+          ],
+          "max_to_average": 1,
+          "run": {
+            "seed": 726,
+            "starts": 1,
+            "initial_cut": "0",
+            "search_nodes_used": 0,
+            "moves": 0,
+            "swaps": 0,
+            "passes": 0,
+            "rolled_back": 0,
+            "budget_limited": false,
+            "budget": {
+              "passes": 0,
+              "moves": 10000,
+              "swap_trials": 10000,
+              "candidates": 200000,
+              "search_nodes": 100000
+            }
+          }
+        },
+        "measurement": {
+          "seconds": 0.026327500000206783,
+          "observed_peak_working_set_bytes": 7880704
+        }
+      },
+      "refined": {
+        "report": {
+          "schema_version": 1,
+          "status": "ok",
           "vertices": 6,
           "edges": 1,
           "pins": 1,
@@ -1125,8 +1125,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.027106500000172673,
-          "observed_peak_working_set_bytes": 7892992
+          "seconds": 0.027324700000008306,
+          "observed_peak_working_set_bytes": 7897088
         }
       },
       "strict_improvement": false
@@ -1179,8 +1179,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.023865099999966333,
-          "observed_peak_working_set_bytes": 7938048
+          "seconds": 0.03215469999986453,
+          "observed_peak_working_set_bytes": 7892992
         }
       },
       "refined": {
@@ -1227,11 +1227,13 @@
           }
         },
         "measurement": {
-          "seconds": 0.032572800000252755,
-          "observed_peak_working_set_bytes": 7925760
+          "seconds": 0.026243500000418862,
+          "observed_peak_working_set_bytes": 7888896
         }
       },
       "strict_improvement": false
     }
-  ]
+  ],
+  "build_profile": "debug",
+  "executable_sha256": "ae36196e7e94a791939ad2cbfea2e1fdcd82cbfd956d583d27ac16d4a28c298e"
 }

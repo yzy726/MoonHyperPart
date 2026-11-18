@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [native, js, wasm-gc]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install MoonBit
+        run: |
+          curl -fsSL https://cli.moonbitlang.com/install/unix.sh | bash
+          echo "$HOME/.moon/bin" >> "$GITHUB_PATH"
+      - run: moon version --all
+      - run: moon fmt --check
+      - run: moon check --target ${{ matrix.target }} --deny-warn
+      - run: moon test --target ${{ matrix.target }} --deny-warn
+      - run: moon build --target ${{ matrix.target }} --deny-warn
+      - name: Check public interfaces
+        if: matrix.target == 'native'
+        run: |
+          moon info --target native
+          git diff --exit-code -- '*.mbti'
+      - name: Files, examples, packaged consumer and fixed benchmark
+        if: matrix.target == 'native'
+        run: |
+          moon run cmd/main --target native --build-only --deny-warn
+          python scripts/smoke.py --exe _build/native/debug/build/cmd/main/main.exe
+          python scripts/examples.py all --exe _build/native/debug/build/cmd/main/main.exe
+          python scripts/benchmark.py --exe _build/native/debug/build/cmd/main/main.exe --output _build/benchmark.json

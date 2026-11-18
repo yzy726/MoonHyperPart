@@ -57,6 +57,7 @@ def measured(arguments):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--exe", type=Path, required=True)
+    parser.add_argument("--profile", choices=("debug", "release"), default="debug")
     parser.add_argument("--output", type=Path, default=ROOT / ".agent-workplace/benchmark.json")
     args = parser.parse_args()
     executable = args.exe.resolve()
@@ -98,8 +99,10 @@ def main():
               "toolchain": subprocess.check_output(["moon", "version", "--all"], cwd=ROOT, text=True).strip(),
               "memory_method": "sampled GetProcessMemoryInfo.PeakWorkingSetSize" if os.name == "nt" else "unmeasured",
               "manifest_sha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest(), "runs": rows}
+    result["build_profile"] = args.profile
+    result["executable_sha256"] = hashlib.sha256(executable.read_bytes()).hexdigest()
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    args.output.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
     print(f"Benchmark passed: {len(rows)} runs, {sum(row['strict_improvement'] for row in rows)} strict improvements")
     for row in rows:
         print(row["instance"], row["seed"], row["baseline"]["report"]["cut_net"], "->", row["refined"]["report"]["cut_net"])

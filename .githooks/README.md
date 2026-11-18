@@ -2,7 +2,7 @@
 
 ## Pre-commit Hook
 
-This pre-commit hook performs automatic checks before finalizing your commit.
+pre-commit runs formatting and native type checks. commit-msg checks Conventional Commit subjects. pre-push runs native tests.
 
 ### Usage Instructions
 
