@@ -1,0 +1,34 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "Ag108/MoonHyperPart/src/cli"
+
+import {
+  "Ag108/MoonHyperPart",
+  "Ag108/MoonHyperPart/src/model",
+  "moonbitlang/core/debug",
+}
+
+// Values
+pub fn help() -> String
+
+pub fn parse_args(Array[String]) -> Result[Command, @model.InputError]
+
+// Errors
+
+// Types and methods
+#derive(@debug.Debug)
+pub struct Command {
+  action : String
+  input : String
+  partition_file : String?
+  output : String?
+  report : String?
+  capacities : Array[Int64]?
+  imbalance_permille : Int32
+  options : @MoonHyperPart.Options
+  limits : @model.Limits
+}
+pub fn Command::to_repr(Self) -> @debug.Repr
+
+// Type aliases
+
+// Traits

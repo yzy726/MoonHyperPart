@@ -1,5 +1,16 @@
-// import {
-//   "Ag108/MoonHyperPart" @lib,
-// }
+import {
+  "Ag108/MoonHyperPart" @lib,
+  "Ag108/MoonHyperPart/src/cli",
+  "moonbitlang/core/env",
+  "moonbitlang/core/async",
+  "moonbitlang/core/async/fs",
+  "moonbitlang/core/encoding/utf8",
+}
 
 pkgtype(kind: "executable")
+
+supported_targets = "native"
+
+options(
+  "allow-experimental-packages": true,
+)

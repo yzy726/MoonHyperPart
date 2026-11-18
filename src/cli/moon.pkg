@@ -1,0 +1,4 @@
+import {
+  "Ag108/MoonHyperPart" @lib,
+  "moonbitlang/core/debug",
+}
