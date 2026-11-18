@@ -1,0 +1,38 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "Ag108/MoonHyperPart/src/initial"
+
+import {
+  "Ag108/MoonHyperPart/src/metrics",
+  "Ag108/MoonHyperPart/src/model",
+  "moonbitlang/core/debug",
+  "moonbitlang/core/json",
+}
+
+// Values
+pub fn construct(@model.Hypergraph, Array[Int64], seed~ : UInt32, starts~ : Int32, search_nodes~ : Int32) -> Result[InitialResult, SolveError]
+
+// Errors
+
+// Types and methods
+#derive(@debug.Debug)
+pub struct InitialResult {
+  assignment : Array[Int32]
+  metrics : @metrics.Metrics
+  starts_tried : Int32
+  search_nodes : Int32
+}
+pub fn InitialResult::to_repr(Self) -> @debug.Repr
+
+#derive(Eq, @debug.Debug, @json.ToJson)
+pub(all) struct SolveError {
+  kind : String
+  message : String
+}
+pub fn SolveError::equal(Self, Self) -> Bool
+pub fn SolveError::not_equal(Self, Self) -> Bool
+pub fn SolveError::to_json(Self) -> @json.Json
+pub fn SolveError::to_repr(Self) -> @debug.Repr
+
+// Type aliases
+
+// Traits
