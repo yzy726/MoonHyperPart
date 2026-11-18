@@ -1,0 +1,64 @@
+{
+  "starts": 1,
+  "schema_version": 1,
+  "registered_date": "2026-11-18",
+  "candidates": 200000,
+  "seeds": [
+    726,
+    1
+  ],
+  "search_nodes": 100000,
+  "instances": [
+    {
+      "sha256": "4923b5cf783ffda2f45907546a4512905250f33a39e471005d94db2813b96167",
+      "path": "testdata/tiny_optimum.hgr",
+      "capacities": [
+        "3",
+        "3"
+      ]
+    },
+    {
+      "sha256": "61c8eaa3d3d825991e68495ff3f976763ceb41402d60851d58a0df875951dd06",
+      "path": "testdata/weighted_balance.hgr",
+      "capacities": [
+        "3",
+        "3"
+      ]
+    },
+    {
+      "sha256": "355f8d23bf0d223429a8065d66314650f875c0ad158176ecf2ebca7c73473196",
+      "path": "testdata/repair_budget.hgr",
+      "capacities": [
+        "15",
+        "15"
+      ]
+    },
+    {
+      "sha256": "6f508b4821611d5e3ddfa7cf8f8b8a78246ba38e244c9bdb3ae7bb43a7d80d10",
+      "path": "testdata/clustered12.hgr",
+      "capacities": [
+        "6",
+        "6"
+      ]
+    },
+    {
+      "sha256": "de343ba3552df2f2bd82a2a3fa32df4f04bb6e529054a6f6dbc302d8c1826920",
+      "path": "testdata/disconnected8.hgr",
+      "capacities": [
+        "4",
+        "4"
+      ]
+    },
+    {
+      "sha256": "89eb5d9995ae5ba8b93a3e2bf5de127c904220d984bc5f22a9aade73e64d631e",
+      "path": "testdata/isolated6.hgr",
+      "capacities": [
+        "3",
+        "3"
+      ]
+    }
+  ],
+  "passes": 8,
+  "swap_trials": 10000,
+  "moves": 10000
+}
