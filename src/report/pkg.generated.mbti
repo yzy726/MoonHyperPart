@@ -1,0 +1,27 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "Ag108/MoonHyperPart/src/report"
+
+import {
+  "Ag108/MoonHyperPart/src/metrics",
+  "Ag108/MoonHyperPart/src/model",
+  "moonbitlang/core/json",
+}
+
+// Values
+pub fn error_json(@model.InputError) -> String
+
+pub fn inspect_json(@model.Hypergraph) -> String
+
+pub fn metrics_json(@model.Hypergraph, @metrics.Metrics, run? : @json.Json) -> String
+
+pub fn parse_partition(StringView, Int32, limits? : @model.Limits) -> Result[Array[Int32], @model.InputError]
+
+pub fn partition_text(@model.Hypergraph, Array[Int32], Array[Int64]) -> Result[String, @model.InputError]
+
+// Errors
+
+// Types and methods
+
+// Type aliases
+
+// Traits
