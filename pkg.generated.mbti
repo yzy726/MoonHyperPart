@@ -1,12 +1,74 @@
 // Generated using `moon info`, DON'T EDIT IT
 package "Ag108/MoonHyperPart"
 
+import {
+  "Ag108/MoonHyperPart/src/initial",
+  "Ag108/MoonHyperPart/src/metrics",
+  "Ag108/MoonHyperPart/src/model",
+  "Ag108/MoonHyperPart/src/refine",
+  "moonbitlang/core/debug",
+  "moonbitlang/core/json",
+}
+
 // Values
+pub fn build(Array[Int64], Array[Array[Int32]], Array[Int64], limits? : @model.Limits) -> Result[@model.Hypergraph, @model.InputError]
+
+pub fn error_json(@model.InputError) -> String
+
+pub fn inspect_json(@model.Hypergraph) -> String
+
+pub fn metrics_json(@model.Hypergraph, @metrics.Metrics, run? : @json.Json) -> String
+
+pub fn parse(StringView, limits? : @model.Limits) -> Result[@model.Hypergraph, @model.InputError]
+
+pub fn parse_partition(StringView, Int32, limits? : @model.Limits) -> Result[Array[Int32], @model.InputError]
+
+pub fn partition(@model.Hypergraph, Array[Int64], options? : Options) -> Result[PartitionResult, @initial.SolveError]
+
+pub fn partition_text(@model.Hypergraph, Array[Int32], Array[Int64]) -> Result[String, @model.InputError]
+
+pub fn result_json(@model.Hypergraph, PartitionResult) -> String
+
+pub fn uniform_capacity(Int64, Int32) -> Result[Int64, @model.InputError]
+
+pub fn verify(@model.Hypergraph, Array[Int32], Array[Int64]) -> Result[@metrics.Metrics, @model.InputError]
 
 // Errors
 
 // Types and methods
+#derive(@debug.Debug)
+pub(all) struct Options {
+  seed : UInt32
+  starts : Int32
+  search_nodes : Int32
+  refinement : @refine.RefinementBudget
+}
+pub fn Options::default() -> Self
+pub fn Options::to_repr(Self) -> @debug.Repr
+
+#derive(@debug.Debug)
+pub struct PartitionResult {
+  assignment : Array[Int32]
+  metrics : @metrics.Metrics
+  initial_cut : Int64
+  starts_tried : Int32
+  search_nodes : Int32
+  options : Options
+  refinement : @refine.RefineResult
+}
+pub fn PartitionResult::to_repr(Self) -> @debug.Repr
 
 // Type aliases
+pub using @model {type Hypergraph}
+
+pub using @model {type InputError}
+
+pub using @model {type Limits}
+
+pub using @metrics {type Metrics}
+
+pub using @refine {type RefinementBudget}
+
+pub using @initial {type SolveError}
 
 // Traits
