@@ -2,7 +2,7 @@
 
 MoonBit 加权超图二分库，提供平衡初始划分、受预算限制的 FM 移动与成对交换，以及读取原始超图的独立验证器。超边直接连接多个顶点，优化目标为 cut-net。
 
-核心库支持 native、JS、wasm-gc，文件 CLI 使用 native。当前版本为 0.1.0，Mooncakes 发布待完成。本地 ZIP 包的独立消费端验证可通过下述命令重跑。
+核心库支持 native、JS、wasm-gc，文件 CLI 使用 native。模块名为 `Ag108/MoonHyperPart`，当前版本为 0.1.0。项目仓库位于 [yzy726/MoonHyperPart](https://github.com/yzy726/MoonHyperPart)。本地 ZIP 包的独立消费端验证可通过下述命令重跑。
 
 ## 环境与运行
 
@@ -22,6 +22,11 @@ moon run cmd/main --target native -- verify testdata/tiny_optimum.hgr tiny.part 
 ## 库调用
 
 其他项目在 `moon.pkg` 中导入 `"Ag108/MoonHyperPart"`。独立项目见 `examples/cli_consumer`。以下示例随 `moon test` 编译运行。
+
+```sh
+moon add Ag108/MoonHyperPart@0.1.0
+python scripts/consumer.py --registry
+```
 
 ```mbt check
 ///|
