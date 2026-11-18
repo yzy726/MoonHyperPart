@@ -1,0 +1,42 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "Ag108/MoonHyperPart/src/refine"
+
+import {
+  "Ag108/MoonHyperPart/src/initial",
+  "Ag108/MoonHyperPart/src/metrics",
+  "Ag108/MoonHyperPart/src/model",
+  "moonbitlang/core/debug",
+}
+
+// Values
+pub fn refine(@model.Hypergraph, Array[Int32], Array[Int64], budget? : RefinementBudget) -> Result[RefineResult, @initial.SolveError]
+
+// Errors
+
+// Types and methods
+#derive(@debug.Debug)
+pub struct RefineResult {
+  assignment : Array[Int32]
+  metrics : @metrics.Metrics
+  initial_cut : Int64
+  moves : Int32
+  swaps : Int32
+  passes : Int32
+  rolled_back : Int32
+  budget_limited : Bool
+}
+pub fn RefineResult::to_repr(Self) -> @debug.Repr
+
+#derive(@debug.Debug)
+pub(all) struct RefinementBudget {
+  max_passes : Int32
+  max_moves : Int32
+  max_swap_trials : Int32
+  max_candidates : Int32
+}
+pub fn RefinementBudget::default() -> Self
+pub fn RefinementBudget::to_repr(Self) -> @debug.Repr
+
+// Type aliases
+
+// Traits

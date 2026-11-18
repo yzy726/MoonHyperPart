@@ -1,0 +1,6 @@
+import {
+  "Ag108/MoonHyperPart/src/model",
+  "Ag108/MoonHyperPart/src/metrics",
+  "Ag108/MoonHyperPart/src/initial",
+  "moonbitlang/core/debug",
+}
