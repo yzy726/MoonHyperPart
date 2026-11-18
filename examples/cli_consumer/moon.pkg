@@ -1,0 +1,2 @@
+import { "Ag108/MoonHyperPart" @hyperpart }
+pkgtype(kind: "executable")

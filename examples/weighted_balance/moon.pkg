@@ -1,0 +1,6 @@
+import {
+  "Ag108/MoonHyperPart" @hyperpart,
+  "Ag108/MoonHyperPart/src/refine",
+}
+
+pkgtype(kind: "executable")
