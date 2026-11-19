@@ -10,7 +10,7 @@
   "search_nodes": 100000,
   "instances": [
     {
-      "sha256": "4923b5cf783ffda2f45907546a4512905250f33a39e471005d94db2813b96167",
+      "sha256": "c7412d1f880052561c9617f4d2ce4da3b85907d4f78565bc2a5dc16110cf7b12",
       "path": "testdata/tiny_optimum.hgr",
       "capacities": [
         "3",
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "sha256": "61c8eaa3d3d825991e68495ff3f976763ceb41402d60851d58a0df875951dd06",
+      "sha256": "09ddc22c599d7e7ec4c65a2dd846c6020c8786496a945b639f9d26248fdd799c",
       "path": "testdata/weighted_balance.hgr",
       "capacities": [
         "3",
@@ -26,7 +26,7 @@
       ]
     },
     {
-      "sha256": "355f8d23bf0d223429a8065d66314650f875c0ad158176ecf2ebca7c73473196",
+      "sha256": "8b8a448c9501279f860db3e630e9ac6143151405b372e9a8a1f7ab73fde88d2b",
       "path": "testdata/repair_budget.hgr",
       "capacities": [
         "15",
@@ -34,7 +34,7 @@
       ]
     },
     {
-      "sha256": "6f508b4821611d5e3ddfa7cf8f8b8a78246ba38e244c9bdb3ae7bb43a7d80d10",
+      "sha256": "11844db98d37699a32d5446f777d210703f6f124e5fc6a704fd6c599c9b6e7b4",
       "path": "testdata/clustered12.hgr",
       "capacities": [
         "6",

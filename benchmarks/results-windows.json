@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "measured_at_utc": "2026-11-18T12:43:46.468612+00:00",
-  "algorithm_commit": "28638510af2da317c7fdabb5c20c26c47e9672ea",
+  "measured_at_utc": "2026-11-19T05:19:29.727813+00:00",
+  "algorithm_commit": "82c46a4736d286bead97d20ba488491585e68d2b",
   "platform": "Windows-11-10.0.22631-SP0",
   "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
   "logical_cpus": 28,
   "toolchain": "moon 0.1.20261104 (940aa18 2026-11-04) ~\\.moon\\bin\\moon.exe\nmoonc v0.10.20+65efd5b93 (2026-11-05) ~\\.moon\\bin\\moonc.exe\nmoonrun 0.1.20261104 (940aa18 2026-11-04) ~\\.moon\\bin\\moonrun.exe\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg",
   "memory_method": "sampled GetProcessMemoryInfo.PeakWorkingSetSize",
-  "manifest_sha256": "3a1ba6bf5b7b5db2c11e104ea7579bb22f9c0754a28dac7f61f5fb442a6a1679",
+  "manifest_sha256": "df169cb9d9aa82681427f89d8866bfe23044c3fa6ad3f94227bb0b003f006975",
   "runs": [
     {
       "instance": "testdata/tiny_optimum.hgr",
       "seed": 726,
-      "sha256": "4923b5cf783ffda2f45907546a4512905250f33a39e471005d94db2813b96167",
+      "sha256": "c7412d1f880052561c9617f4d2ce4da3b85907d4f78565bc2a5dc16110cf7b12",
       "baseline": {
         "report": {
           "schema_version": 1,
@@ -57,8 +57,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.034078799999861076,
-          "observed_peak_working_set_bytes": 7888896
+          "seconds": 0.46684559999994235,
+          "observed_peak_working_set_bytes": 8069120
         }
       },
       "refined": {
@@ -105,8 +105,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.024398000000019238,
-          "observed_peak_working_set_bytes": 7888896
+          "seconds": 0.04705090000061318,
+          "observed_peak_working_set_bytes": 8069120
         }
       },
       "strict_improvement": true
@@ -114,7 +114,7 @@
     {
       "instance": "testdata/tiny_optimum.hgr",
       "seed": 1,
-      "sha256": "4923b5cf783ffda2f45907546a4512905250f33a39e471005d94db2813b96167",
+      "sha256": "c7412d1f880052561c9617f4d2ce4da3b85907d4f78565bc2a5dc16110cf7b12",
       "baseline": {
         "report": {
           "schema_version": 1,
@@ -159,8 +159,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.02697840000018914,
-          "observed_peak_working_set_bytes": 7929856
+          "seconds": 0.04226099999505095,
+          "observed_peak_working_set_bytes": 8040448
         }
       },
       "refined": {
@@ -207,8 +207,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.03085220000002664,
-          "observed_peak_working_set_bytes": 7888896
+          "seconds": 0.04879420000361279,
+          "observed_peak_working_set_bytes": 8044544
         }
       },
       "strict_improvement": true
@@ -216,7 +216,7 @@
     {
       "instance": "testdata/weighted_balance.hgr",
       "seed": 726,
-      "sha256": "61c8eaa3d3d825991e68495ff3f976763ceb41402d60851d58a0df875951dd06",
+      "sha256": "09ddc22c599d7e7ec4c65a2dd846c6020c8786496a945b639f9d26248fdd799c",
       "baseline": {
         "report": {
           "schema_version": 1,
@@ -261,8 +261,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.0266591999998127,
-          "observed_peak_working_set_bytes": 7696384
+          "seconds": 0.0409975000002305,
+          "observed_peak_working_set_bytes": 8036352
         }
       },
       "refined": {
@@ -309,8 +309,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.026638700000148674,
-          "observed_peak_working_set_bytes": 7884800
+          "seconds": 0.041386000004422385,
+          "observed_peak_working_set_bytes": 8036352
         }
       },
       "strict_improvement": false
@@ -318,7 +318,7 @@
     {
       "instance": "testdata/weighted_balance.hgr",
       "seed": 1,
-      "sha256": "61c8eaa3d3d825991e68495ff3f976763ceb41402d60851d58a0df875951dd06",
+      "sha256": "09ddc22c599d7e7ec4c65a2dd846c6020c8786496a945b639f9d26248fdd799c",
       "baseline": {
         "report": {
           "schema_version": 1,
@@ -363,8 +363,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.02923640000017258,
-          "observed_peak_working_set_bytes": 7921664
+          "seconds": 0.04133880000154022,
+          "observed_peak_working_set_bytes": 8036352
         }
       },
       "refined": {
@@ -411,8 +411,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.025294399999893358,
-          "observed_peak_working_set_bytes": 7888896
+          "seconds": 0.05423310000333004,
+          "observed_peak_working_set_bytes": 8028160
         }
       },
       "strict_improvement": false
@@ -420,7 +420,7 @@
     {
       "instance": "testdata/repair_budget.hgr",
       "seed": 726,
-      "sha256": "355f8d23bf0d223429a8065d66314650f875c0ad158176ecf2ebca7c73473196",
+      "sha256": "8b8a448c9501279f860db3e630e9ac6143151405b372e9a8a1f7ab73fde88d2b",
       "baseline": {
         "report": {
           "schema_version": 1,
@@ -465,8 +465,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.026926900000034948,
-          "observed_peak_working_set_bytes": 7925760
+          "seconds": 0.04332140000042273,
+          "observed_peak_working_set_bytes": 8036352
         }
       },
       "refined": {
@@ -513,8 +513,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.024339200000213168,
-          "observed_peak_working_set_bytes": 7888896
+          "seconds": 0.04392960000404855,
+          "observed_peak_working_set_bytes": 8040448
         }
       },
       "strict_improvement": false
@@ -522,7 +522,7 @@
     {
       "instance": "testdata/repair_budget.hgr",
       "seed": 1,
-      "sha256": "355f8d23bf0d223429a8065d66314650f875c0ad158176ecf2ebca7c73473196",
+      "sha256": "8b8a448c9501279f860db3e630e9ac6143151405b372e9a8a1f7ab73fde88d2b",
       "baseline": {
         "report": {
           "schema_version": 1,
@@ -567,8 +567,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.02555239999992409,
-          "observed_peak_working_set_bytes": 7852032
+          "seconds": 0.040053299999271985,
+          "observed_peak_working_set_bytes": 8073216
         }
       },
       "refined": {
@@ -615,8 +615,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.02955310000015743,
-          "observed_peak_working_set_bytes": 7897088
+          "seconds": 0.04217159999825526,
+          "observed_peak_working_set_bytes": 8036352
         }
       },
       "strict_improvement": false
@@ -624,7 +624,7 @@
     {
       "instance": "testdata/clustered12.hgr",
       "seed": 726,
-      "sha256": "6f508b4821611d5e3ddfa7cf8f8b8a78246ba38e244c9bdb3ae7bb43a7d80d10",
+      "sha256": "11844db98d37699a32d5446f777d210703f6f124e5fc6a704fd6c599c9b6e7b4",
       "baseline": {
         "report": {
           "schema_version": 1,
@@ -669,8 +669,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.02489300000024741,
-          "observed_peak_working_set_bytes": 7892992
+          "seconds": 0.0409908000001451,
+          "observed_peak_working_set_bytes": 8044544
         }
       },
       "refined": {
@@ -717,8 +717,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.029410699999971257,
-          "observed_peak_working_set_bytes": 7892992
+          "seconds": 0.043380299997807015,
+          "observed_peak_working_set_bytes": 8036352
         }
       },
       "strict_improvement": true
@@ -726,7 +726,7 @@
     {
       "instance": "testdata/clustered12.hgr",
       "seed": 1,
-      "sha256": "6f508b4821611d5e3ddfa7cf8f8b8a78246ba38e244c9bdb3ae7bb43a7d80d10",
+      "sha256": "11844db98d37699a32d5446f777d210703f6f124e5fc6a704fd6c599c9b6e7b4",
       "baseline": {
         "report": {
           "schema_version": 1,
@@ -771,8 +771,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.028421200000138924,
-          "observed_peak_working_set_bytes": 7909376
+          "seconds": 0.042451499997696374,
+          "observed_peak_working_set_bytes": 8024064
         }
       },
       "refined": {
@@ -819,8 +819,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.026094000000284723,
-          "observed_peak_working_set_bytes": 7901184
+          "seconds": 0.0483200999951805,
+          "observed_peak_working_set_bytes": 8044544
         }
       },
       "strict_improvement": true
@@ -873,8 +873,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.025519400000121095,
-          "observed_peak_working_set_bytes": 7888896
+          "seconds": 0.048252900000079535,
+          "observed_peak_working_set_bytes": 8073216
         }
       },
       "refined": {
@@ -921,8 +921,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.026114199999938137,
-          "observed_peak_working_set_bytes": 7884800
+          "seconds": 0.04184789999999339,
+          "observed_peak_working_set_bytes": 8044544
         }
       },
       "strict_improvement": false
@@ -975,8 +975,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.027722399999674963,
-          "observed_peak_working_set_bytes": 7901184
+          "seconds": 0.0413302000015392,
+          "observed_peak_working_set_bytes": 8069120
         }
       },
       "refined": {
@@ -1023,8 +1023,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.026291700000001583,
-          "observed_peak_working_set_bytes": 7921664
+          "seconds": 0.03921429999900283,
+          "observed_peak_working_set_bytes": 8040448
         }
       },
       "strict_improvement": false
@@ -1077,8 +1077,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.026327500000206783,
-          "observed_peak_working_set_bytes": 7880704
+          "seconds": 0.042601199995260686,
+          "observed_peak_working_set_bytes": 8032256
         }
       },
       "refined": {
@@ -1125,8 +1125,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.027324700000008306,
-          "observed_peak_working_set_bytes": 7897088
+          "seconds": 0.0435049000006984,
+          "observed_peak_working_set_bytes": 8019968
         }
       },
       "strict_improvement": false
@@ -1179,8 +1179,8 @@
           }
         },
         "measurement": {
-          "seconds": 0.03215469999986453,
-          "observed_peak_working_set_bytes": 7892992
+          "seconds": 0.043266599997878075,
+          "observed_peak_working_set_bytes": 8052736
         }
       },
       "refined": {
@@ -1227,13 +1227,13 @@
           }
         },
         "measurement": {
-          "seconds": 0.026243500000418862,
-          "observed_peak_working_set_bytes": 7888896
+          "seconds": 0.04057699999975739,
+          "observed_peak_working_set_bytes": 8073216
         }
       },
       "strict_improvement": false
     }
   ],
   "build_profile": "debug",
-  "executable_sha256": "ae36196e7e94a791939ad2cbfea2e1fdcd82cbfd956d583d27ac16d4a28c298e"
+  "executable_sha256": "c980423a78f6d7ca7e769e2c80da7d636cb5ce510e7e946f1844a60cd9794cf6"
 }
