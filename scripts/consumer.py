@@ -6,6 +6,7 @@ import shutil
 import subprocess
 import tempfile
 import zipfile
+from prepare_package import prepare_readme
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -16,6 +17,7 @@ def main():
     parser.add_argument("--registry", action="store_true", help="resolve the published 0.1.0 from Mooncakes")
     args = parser.parse_args()
     if not args.registry:
+        prepare_readme()
         subprocess.run(["moon", "package"], cwd=ROOT, check=True, timeout=120)
     archive = ROOT / "_build/publish/Ag108-MoonHyperPart-0.1.0.zip"
     workspace_parent = ROOT / ".agent-workplace"
@@ -27,6 +29,9 @@ def main():
             package = workspace / "package"
             package.mkdir()
             with zipfile.ZipFile(archive) as zipped:
+                names = {member.filename.replace("\\", "/") for member in zipped.infolist()}
+                assert "README.mbt.md" in names and "README.md" not in names
+                assert "项目申报书.md" not in names
                 for member in zipped.infolist():
                     path = (package / member.filename.replace("\\", "/")).resolve()
                     assert path.is_relative_to(package.resolve()), member.filename

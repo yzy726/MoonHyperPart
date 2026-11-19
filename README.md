@@ -8,7 +8,10 @@ MoonBit 加权超图二分库，提供平衡初始划分、受预算限制的 FM
 
 开发验证使用 moon 0.1.20261104、moonc v0.10.20+65efd5b93、Node.js 和 Python 3。项目仅依赖随工具链提供的 MoonBit core。native CLI 使用 core 的实验性 async 文件接口。
 
+`README.md` 随 GitHub 源码提交，`README.mbt.md` 用于 Mooncakes 打包。首次检出后先运行准备脚本，它仅在后者缺失时从 `README.md` 创建副本。
+
 ```sh
+python scripts/prepare_package.py
 moon version --all
 moon test --target native --deny-warn
 moon run cmd/main --target native -- --help

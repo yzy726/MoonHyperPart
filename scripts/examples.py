@@ -5,6 +5,7 @@ import json
 import subprocess
 import sys
 import tempfile
+from prepare_package import prepare_readme
 
 ROOT = Path(__file__).resolve().parents[1]
 NAMES = ("tiny_optimum", "weighted_balance", "hmetis_roundtrip", "bad_input_and_budget", "cli_consumer")
@@ -15,6 +16,7 @@ def main():
     parser.add_argument("example", choices=(*NAMES, "all"))
     parser.add_argument("--exe", type=Path)
     args = parser.parse_args()
+    prepare_readme()
     selected = NAMES if args.example == "all" else (args.example,)
     executable = args.exe.resolve() if args.exe else None
     if any(name in selected for name in NAMES[2:]) and executable is None:
