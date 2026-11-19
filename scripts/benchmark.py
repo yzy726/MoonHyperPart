@@ -69,7 +69,9 @@ def main():
         temporary = Path(directory)
         for instance in manifest["instances"]:
             path = ROOT / instance["path"]
-            assert hashlib.sha256(path.read_bytes()).hexdigest() == instance["sha256"], path
+            data = path.read_bytes()
+            assert b"\r\n" not in data, f"benchmark fixtures must use LF as specified by .gitattributes: {path}"
+            assert hashlib.sha256(data).hexdigest() == instance["sha256"], path
             for seed in manifest["seeds"]:
                 common = ["--capacities", ",".join(instance["capacities"]), "--seed", str(seed),
                           "--starts", str(manifest["starts"]), "--search-nodes", str(manifest["search_nodes"]),
