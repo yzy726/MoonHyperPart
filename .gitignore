@@ -21,6 +21,7 @@ docs/*验收*.md
 docs/*初验*.md
 docs/*终验*.md
 *.tmp
+/README.mbt.md
 **/*ACCEPTANCE*.md
 **/*acceptance*.md
 **/*验收*.md

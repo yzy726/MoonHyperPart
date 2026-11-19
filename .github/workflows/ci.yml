@@ -28,6 +28,8 @@ jobs:
           curl -fsSL https://cli.moonbitlang.com/install/unix.sh | bash
           echo "$HOME/.moon/bin" >> "$GITHUB_PATH"
       - run: moon version --all
+      - name: Prepare Mooncakes README
+        run: python scripts/prepare_package.py
       - run: moon fmt --check
       - run: moon check --target ${{ matrix.target }} --deny-warn
       - run: moon test --target ${{ matrix.target }} --deny-warn
